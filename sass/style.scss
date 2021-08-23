@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=PT+Sans:ital,wght@0,400;1,700&display=swap');
+@import "mixins";
+@import "./utils/variables";
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+
+
+.title {
+    text-align: center;
+    color: $clr-primary;
+    font-weight: $ff-b;
+    font-family: $ff-cursive;
+    font-size: map-get($map: $font-size, $key: h1);
+    margin-bottom: 40px;
+    letter-spacing: .4rem;
+}
+
+.card__wrapper {
+    display: flex;
+    gap: 48px;
+}
+
+.card {
+    @include cards();
+}
+
+

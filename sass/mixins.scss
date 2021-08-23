@@ -1,0 +1,59 @@
+// ------ mixins ------ //
+@mixin cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 244px;
+    height: 440px;
+    background: $clr-cardBg;
+    padding: 25px 13px 12px 13px;
+    border-radius: 24px;
+
+    &__image {
+        width: 149px;
+        height: 149px;
+        text-align: center;
+        margin-bottom: 44px;
+
+        img {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {
+        text-align: center;
+        margin-bottom: 47px;
+        font-size: map-get($map: $font-size, $key: texte);
+        font-weight: $ff-n;
+        color: $clr-text;
+        font-family: $ff-sans;
+
+        span {
+            font-weight: $ff-b;
+        }
+    }
+
+    .card__infos {
+        text-align: center;
+
+        .infos__name {
+            color: $clr-primary;
+            text-transform: uppercase;
+            line-height: 19px;
+            font-weight: $ff-n;
+            font-size: map-get($map: $font-size, $key: h2);
+            font-family: $ff-cursive;
+            margin-bottom: 5px;
+        }
+
+        .infos__job {
+            font-weight: $ff-n;
+            font-family: $ff-sans;
+            color: $clr-subtitle;
+        }
+    }
+}
